@@ -29,11 +29,11 @@
       "Port": 25
     },
     "Authentication": {
-      "GoogleClientId": "320594228098-ia5a864btu19vg1gprmd2b2cspamk0r3.apps.googleusercontent.com",
-      "GoogleClientSecret": "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",
+      "GoogleClientId": "",
+      "GoogleClientSecret": "",
       "GoogleInCallBackUrl": "/signin-google",
-      "LinkedInClientId": "77tpsycog5u87z",
-      "LinkedInClientSecret": "WPL_AP1.srszpOkopTXE9FL7.62QqSA==",
+      "LinkedInClientId": "",
+      "LinkedInClientSecret": "",
       "LinkedInCallBackUrl": "/signin-linkedin"
     },
     "JobConnection": "JobConnection"
