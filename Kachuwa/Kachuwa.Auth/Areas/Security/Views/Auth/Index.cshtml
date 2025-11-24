@@ -1,0 +1,9 @@
+﻿@using Kachuwa.Localization
+@using Kachuwa.Web
+@using Newtonsoft.Json
+@inject ILocaleResourceProvider LocaleResource
+@{
+    LocaleResource.LookUpGroupAt("SignIn");
+    ViewData["Title"] = LocaleResource.Get("SignIn");
+}
+<h1>This is bibek Sah</h1>

@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Areas\Security\Views\Dash\Index.cshtml" />
+		<None Remove="Areas\Security\Views\Auth\Index.cshtml" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Areas\Security\Views\Auth\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\Security\Views\Dash\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Security\Model\" />
+    <Folder Include="Helpers\Common\" />
+    <Folder Include="Migrations\Globals\" />
+    <Folder Include="Migrations\Locals\" />
+    <Folder Include="Migrations\Sql\Functions\" />
+    <Folder Include="Migrations\Sql\Views\" />
+    <Folder Include="Migrations\Sql\Procedures\" />
+    <Folder Include="Migrations\Sql\Others\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.36" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OAuth" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kachuwa\Kachuwa.Core\Kachuwa.Core.csproj" />
+    <ProjectReference Include="..\Kachuwa\Kachuwa.Identity\Kachuwa.Identity.csproj" />
+    <ProjectReference Include="..\Kachuwa\Kachuwa.Web\Kachuwa.Web.csproj" />
+  </ItemGroup>
+
+</Project>
